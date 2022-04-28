@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #grand {
+            zoom: 80%;
+        }
+        
+        #parent {
+            width: 600px;
+            height: 100%;
+            margin: auto;
+            margin-top: 7%;
+            /* /transition: transform .6s;/
+            /border: 1px solid red;/ */
+        }
+        
+        #container {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left: 70px;
+        }
+        
+        p {
+            font-size: 22px;
+            color: rgb(238, 210, 210);
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 35px;
+            margin-left: 70px
+        }
+        
+        #logo {
+            display: grid;
+            grid-template-columns: repeat(4, 90px);
+            margin-left: 180px;
+            margin-bottom: 40px;
+            font-size: 10px;
+        }
+        
+        #or {
+            margin-left: 315px;
+            border-radius: 50%;
+            border: 1px solid;
+            width: 55px;
+            height: 55px;
+            margin-top: 20px;
+            background-color: rgb(21, 21, 56);
+            margin-bottom: 50px;
+        }
+        
+        #or>p {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 30px;
+            color: white;
+            margin-left: 4px;
+        }
+        
+        form {
+            margin-left: 220px;
+            margin-top: 30px;
+        }
+        
+        #email {
+            font-size: 40px;
+            margin-left: -120px;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            /* /border-bottom: 1px solid;/ */
+            padding: 5px;
+            background-color: rgb(15, 6, 23);
+            color: white;
+            margin-bottom: 20px;
+            border-radius: 10px 10px 0px 0px;
+        }
+        
+        #login {
+            padding: 14px 220px 14px 220px;
+            background-color: rgb(15, 6, 23);
+            color: white;
+            font-size: 25px;
+            border: 1px solid;
+            margin-left: -110px;
+            border-radius: 10px;
+            margin-top: 20px
+        }
+        
+        #p {
+            font-size: 19px;
+            margin-bottom: 0px;
+            margin-left: -120px;
+            color: rgb(128, 126, 126);
+        }
+        
+        img {
+            width: 55px;
+        }
+        
+        body {
+            background-color: rgb(15, 6, 23);
+        }
+        
+        form>p {
+            font-size: 18px;
+            margin: 20px;
+            color: rgb(175, 92, 243);
+            margin: 30px
+        }
+        
+        #sp {
+            color: rgb(202, 17, 17);
+            font-size: 35px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: blueviolet
+        }
+    </style>
+</head>
+
+<body>
+    <div id="grand">
+        <div id="parent">
+            <div id="container">
+                <h2>Login to
+                    <span id="sp">Z</span>EE5</h2>
+                <p>Login to continue enjoying uninterrupted video and personalised experience.</p>
+            </div>
+            <div id="logo">
+                <div class="facebook">
+                    <img src="https://www.zee5.com/images/apple-social-icon-circle.svg?ver=2.50.85">
+                </div>
+                <div class=" facebook ">
+                    <img src="https://www.zee5.com/images/fb-social-icon-circle.svg?ver=2.50.85">
+                </div>
+                <div>
+                    <img src="https://www.zee5.com/images/google-social-icon-circle.svg?ver=2.50.85">
+                </div>
+                <div class="facebook">
+                    <img src="https://www.zee5.com/images/twitter-social-icon.svg?ver=2.50.85"></div>
+            </div>
+            <div id="or">
+                <p>or</p>
+            </div>
+            <form>
+                <p id="p">Email ID or Mobile No</p>
+                <input type="text" id="email">
+                <p>Forgot password ?</p>
+                <input type="submit" id="login" value="login">
+                <p>
+                    <span style="color:white">New to ZEE5 ?</span>
+                    <a href="sign_up_page.html"> Register</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", subfun);
+    var register = JSON.parse(localStorage.getItem("user_data_base"))
+
+    function subfun(event) {
+        event.preventDefault();
+        var select = document.querySelector("#email").value;
+        if (register.emailid == select || select == "16haw87@gmail.com") {
+            alert("login successful");
+        } else {
+            alert("Plese check your email id or Mobile no")
+
+        }
+        window.location.href = "di.html";
+    }
+</script>

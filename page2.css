@@ -1,0 +1,96 @@
+
+        #mright,  #mright1, #mright2, #mright3{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+           
+            gap: 5px;
+            margin-top: 3%;
+           
+           
+        }
+      
+     
+        #mleft{
+         width: 20%;
+            margin-left: 5%;
+            margin-top: 5%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: rgb(29, 27, 27);
+            justify-content: space-evenly;
+          
+        }
+        #mleft>button:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        #mleft>h4:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        button,h4{
+            color: white;
+            padding: 10px;
+            background-color:rgb(29, 27, 27);;
+            border: 0px;
+        }
+       
+        #mright img, #mright1 img, #mright2 img,#mright3 img{
+            width:80%;
+            border-radius: 10px;
+            
+        }
+      
+        a:hover{
+            cursor: pointer;
+           
+        }
+        button{
+            margin-bottom: 4%;
+        }
+        #mcontain{
+            width:50%;
+            height:400px
+        }
+        #mcontain div{
+            width:100%;
+          
+        }
+
+     
+        h4{
+            margin-top: 0px;
+            font-size: 10px;
+        }
+      
+
+        #main{
+            display:flex;
+            justify-content: space-around;
+            border:1px solid black;
+            position:fixed;
+            width:100%;
+            height:70px
+        }
+      #make{
+          display: none;
+         margin-top: 2%;
+      }
+
+        .fi:hover+#make,#sub1:hover +#mcontain{
+           display: block;
+          
+        
+          
+        }
+        .fi{
+           position: absolute;
+           border: 10px solid black;
+        }
+
+     
+       

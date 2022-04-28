@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     #main{
+            display:flex;
+            width:95%;
+            margin: auto;
+            justify-content: space-between;
+            background-color: yellow;
+            padding: 2%;
+            margin-top:-1%;
+            border-radius: 10Px;  
+            position: fixed;  
+            height: 10%;
+            
+        }
+        #right{
+            display: flex;
+            
+            width:30%
+        }
+        #mright{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+           gap: 10px;
+            margin-top: 5%;    
+        }
+     
+        #mleft{
+            width:15%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: black;
+            justify-content: space-around;
+            
+          
+        }
+        p:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        p,h4{
+            color: white;
+            padding: 5px;
+        }
+       
+        #mright img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+        #mright div{
+            box-shadow: rgba(148, 47, 47, 0.25) 0px 54px 55px, rgba(201, 184, 184, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        /* .sub{
+            display:none
+        } */
+      .symbol{
+          color: black;
+
+      }
+        .sub{
+            display:none;
+            background-color: rgb(58, 51, 51);
+            border-radius: 10px;
+        }
+        .symbol:hover .sub{
+            display: block;
+            cursor: pointer;
+            color: white;
+
+        }
+        .sub>h3{
+            padding: 15px;
+            text-align: center;
+        }
+       .symbol h5{
+           color: rgb(34, 23, 23);
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left"><h1>zee</h1></div>
+        <div id="right">
+            <div   class="home">Premium |</div>
+      
+            <div  class="mov">Live |</div>
+
+            <div class="symbol"><h5>icon</h5>
+                <div class="sub">
+                    <h3>zeeplex</h3>
+                    <h3>play</h3>
+                    <h3>article</h3>
+                    <h3>Learning</h3>
+                    <h3>kids</h3>
+                    <h3>video</h3>
+                    <h3>story</h3>
+                    <h3>channel</h3>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+    <hr style="color: white;">
+   <div >
+     
+
+    <div id="mcontain">
+        <div id="mleft">
+            <p onclick="b1fun()">Exclusive movie on zee5</p>
+            <p onclick="b2fun()">Zee5 Tamil Originals<br> First episode free</p>
+            <p onclick="b3fun()">IMDB top pics</p>
+            <p onclick="b4fun()">Top Zee5 Movies in Tamil</p>
+        </div>
+        <div id="mright"></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    var Exclusive=[
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z51037/list/1170x658withlogo4ab5c86d536e4a7ab91e4c40ec8a8bf8.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-122736/list/1170x658withlogoe1b31018f8af46aaa13bd05cd7bb1773.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-manual_14f6f12ndhmo/list/1170x658withlog1445960827.jpg",
+
+        }
+    ]
+    var TV=[
+    {  
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-tvshow_899834158/list/171020191170x658.jpg",
+    
+      },
+     
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1078/list/1170x658withlog1901787175.jpg",
+          
+      },
+      {
+         image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-2868/list/062868list5667055314d021c6b39034dc1b4cac411da27ca0d.jpg",
+         
+      },
+    
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-2983/list/062983list.jpg",
+          
+      },
+      
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1174/list/1170x658withlogo970123063.jpg",
+          
+      },
+      
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1392/list/1170x658withlogo472ac5e1760b4e14a0250fee979db2f4.jpg",
+          
+      },
+      {
+         image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1392/list/1170x658withlogo472ac5e1760b4e14a0250fee979db2f4.jpg",
+          
+      },
+    
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-162/list/06162_list.jpg",
+         
+      },
+      
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_223,h_125,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-162/list/06162_list.jpg",
+          
+      },
+  
+    ]
+      var tv1 = [
+  
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-4z517052/list/1170x658withlogo8abeddbc7e434b389dee18e8a4f6031a.jpg",
+          
+      },
+     
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-4z570292/list/1170x658withlogo31d03ade0ff14cf0ba8dc47bf28823ee.jpg",
+        
+      },
+      {
+         image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1965/list/061965inlist.jpg",
+          
+      },
+    
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-1593/list/1170x658withlogoe84ff968e9de4fe3b64d1fa79265f0d5.jpg",
+          
+      },
+      
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-4z571779/list/1170x658withlogo899a4756a5af4fb2b07c139369d02f66.jpg",
+          
+      },
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-2929/list/062929inlist.jpg",
+          
+      },
+      {
+         image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-3107/list/063107inlist4c921413acd64f0fafdc3ad16bebed90.jpg",
+          
+      },
+    
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-2530/list/1170x658withlogo992119944.jpg",
+          
+      },
+      
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-6-3056/list/1170x658withlogo603680404.jpg",
+        
+      },
+       
+      
+    ]
+
+    var Zee=[
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-393368/list/00393368inlist31707932231701428924d1b54418981f368c5858558a.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z558385/list/1170x658withlogo9cc4002f26e14a24bee5bf39e8348b5f.jpg",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-402510/list/00402510inlist.jpg",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z55290/list/1170x658withlogod0f681e2e6c246488a0b0a38e1813231.jpg",
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z51013/list/1170x658withlogo4a81726877ef4b80ac6975a22a7ba7379050bb0d11614135a9f925efd1c33c91.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-164998/list/1170x658withlogo826115889.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-133958/list/thodraa1170x658withlogo.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-320135/list/00320135inlist.jpg",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-206010/list/1170x658withlog2129673017.jpg",
+        }
+    ]
+     
+    localStorage.setItem("Exclusive", JSON.stringify(Exclusive));
+    localStorage.setItem("TV", JSON.stringify(TV));
+    localStorage.setItem("tv1", JSON.stringify(tv1));
+    localStorage.setItem("Zee", JSON.stringify(Zee));
+
+
+   var a= JSON.parse(localStorage.getItem("Exclusive"))
+   var b=JSON.parse(localStorage.getItem("TV"))
+   var c=JSON.parse(localStorage.getItem("tv1"))
+   var d=JSON.parse(localStorage.getItem("Zee"))
+  
+
+       a.map(function(elem,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          tit.textContent=elem.title
+          div.append(im,tit)
+          document.querySelector("#mright").append(div)
+       })
+
+       function b1fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+   
+          
+       b.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b2fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+      
+          
+     c.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b3fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+     
+          
+     a.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b4fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+      
+          
+     d.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+  
+
+
+
+
+</script>

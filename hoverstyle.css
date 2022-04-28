@@ -1,0 +1,81 @@
+ 
+        #mright{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+           gap: 10px;
+            margin-top: 5%;    
+        }
+        #mright1{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+           gap: 10px;
+            margin-top: 5%;    
+        }
+     
+        #mleft{
+            width:15%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: black;
+            justify-content: space-around;
+            
+          
+        }
+        p:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        p,h4{
+            color: white;
+            padding: 5px;
+        }
+       
+        #mright img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+
+        #mright1 img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+        #mright div{
+            box-shadow: rgba(148, 47, 47, 0.25) 0px 54px 55px, rgba(201, 184, 184, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            
+        }
+        #mright1 div{
+            box-shadow: rgba(148, 47, 47, 0.25) 0px 54px 55px, rgba(201, 184, 184, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        /* .sub{
+            display:none
+        } */
+      .symbol{
+          color: black;
+
+      }
+        .sub{
+            display:none;
+            background-color: rgb(58, 51, 51);
+            border-radius: 10px;
+        }
+        .symbol:hover .sub{
+            display: block;
+            cursor: pointer;
+            color: white;
+
+        }
+        .sub>h3{
+            padding: 15px;
+            text-align: center;
+        }
+       .symbol h5{
+           color: rgb(34, 23, 23);
+       }
