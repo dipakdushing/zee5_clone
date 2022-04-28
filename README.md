@@ -1,6 +1,9 @@
 
 #  <h1><a href="https://zee5-clone.netlify.app/">zee5 </a> Website Clone (Learning Purpose)</h1>
 
+# Duration : 1 Week 
+
+
 # <h2>About zee5 Website : </h2>
 
 <a href="https://zee5-clone.netlify.app/">ZEE5 </a>  is an Indian subscription video on-demand and over-the-top streaming service, run by Zee Entertainment Enterprises. It brings best unlimited online shows movies and many kind of videos in different languages. Also Watch premieres of your favourite TV show episodes a day before telecast on ZEE5 & explore blockbuster movies, 100+ original content, music videos, live TV etc.
@@ -43,9 +46,10 @@ This entire journey of making the project was awesome. We have learned lots of t
 ## Team Members and Contributors :
 
 ### 1] Dipak Dushing
-### 2]Shawon Biswas
-### 3]MD Noorish Nauman
-### 4]Hemachandra S
+### 2] Shawon Biswas
+### 3] MD Noorish Nauman
+### 4] Hemachandra S
+### 4] Bala chandra 
 
 
 ## Links :
