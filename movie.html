@@ -1,0 +1,111 @@
+<!-- CCCCCCCCCCCCCCCC -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        #mright{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+            gap: 10px;
+            margin-top: 5%;
+           
+           
+        }
+     
+        #mleft{
+            width:15%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: rgb(29, 27, 27);
+            justify-content: space-around;
+          
+        }
+        #mleft>button:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        button,h4{
+            color: white;
+            padding: 10px;
+            background-color:rgb(29, 27, 27);;
+            border: 0px;
+        }
+       
+        #mright img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+        a:hover{
+            cursor: pointer;
+           
+        }
+        button{
+            margin-bottom: 4%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="mcontain">
+        <div id="mleft">
+            <button id="b1" onclick="b1fun()">Imdb popular Movies</button>
+            <button id="b2"  onclick="b2fun()">TV Shows</button>
+            <br>
+            <button id="b3"  onclick="b3fun()">Webseries</button>
+           
+        </div>
+        <div id="mright"></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+     var b= JSON.parse(localStorage.getItem("webseries"))
+     var a= JSON.parse(localStorage.getItem("music"))
+     console.log(a)
+     console.log(b)
+
+     
+     a.map(function(elem,ind){
+         console.log(a)
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          tit.textContent=elem.title
+          div.append(im,tit)
+          document.querySelector("#mright").append(div)
+       })
+
+       function b1fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+        console.log(b)
+          
+     b.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+</script>

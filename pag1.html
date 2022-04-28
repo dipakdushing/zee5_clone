@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hoverstyle.css">
+    <link rel="stylesheet" href="page2.css">
+    <title>Document</title>
+    <style>
+       
+      #mright img{
+         width:60%
+      }
+       
+
+       
+    </style>
+</head>
+<body>
+  
+   
+
+    <div id="mcontain">
+        <div id="mleft">
+            <p onclick="b1fun()">Exclusive movie on zee5</p>
+            <p onclick="b2fun()">Zee5 original first <br> episode free</p>
+            <p onclick="b3fun()">IMDB top pics</p>
+            <p onclick="b4fun()">Premium bollywood blockbuster</p>
+        </div>
+        <div id="mright1"></div>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+
+   var j= JSON.parse(localStorage.getItem("webseries"))
+   var k=JSON.parse(localStorage.getItem("movie"))
+
+   var m=JSON.parse(localStorage.getItem("movie2"))
+  
+
+       j.map(function(elem,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          tit.textContent=elem.title
+          div.append(im)
+          document.querySelector("#mright1").append(div)
+       })
+
+       function p1fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright1").textContent=""
+   
+          
+       k.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im)
+          document.querySelector("#mright1").append(div)
+
+        })
+    }
+
+    function p2fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright1").textContent=""
+      
+          
+     j.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im)
+          document.querySelector("#mright1").append(div)
+
+        })
+    }
+
+    function p3fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright1").textContent=""
+     
+          
+     m.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im)
+          document.querySelector("#mright1").append(div)
+
+        })
+    }
+
+    function p4fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright1").textContent=""
+      
+          
+     j.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im)
+          document.querySelector("#mright1").append(div)
+
+        })
+    }
+
+  
+
+
+
+
+</script>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+     #main{
+            display:flex;
+            width:95%;
+            margin: auto;
+            justify-content: space-between;
+            background-color: yellow;
+            padding: 2%;
+            margin-top:-1%;
+            border-radius: 10Px;  
+            position: fixed;  
+            height: 10%;
+            
+        }
+        #right{
+            display: flex;
+            
+            width:30%
+        }
+        #mright{
+            width:50%;
+            display: grid;
+            grid-template-columns: repeat(3,20%);
+           gap: 10px;
+            margin-top: 5%;    
+        }
+     
+        #mleft{
+            width:15%;
+            margin-left: 10%;
+            margin-top: 10%;
+        }
+        #mcontain{
+            display: flex;
+            background-color: black;
+            justify-content: space-around;
+            
+          
+        }
+        p:hover{
+            cursor: pointer;
+            background-color: rgb(122, 101, 101);
+            color:white;
+        }
+        p,h4{
+            color: white;
+            padding: 5px;
+        }
+       
+        #mright img{
+            width:100%;
+            border-radius: 10%;
+            
+        }
+        #mright div{
+            box-shadow: rgba(148, 47, 47, 0.25) 0px 54px 55px, rgba(201, 184, 184, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        /* .sub{
+            display:none
+        } */
+      .symbol{
+          color: black;
+
+      }
+        .sub{
+            display:none;
+            background-color: rgb(58, 51, 51);
+            border-radius: 10px;
+        }
+        .symbol:hover .sub{
+            display: block;
+            cursor: pointer;
+            color: white;
+
+        }
+        .sub>h3{
+            padding: 15px;
+            text-align: center;
+        }
+       .symbol h5{
+           color: rgb(34, 23, 23);
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="left"><h1>zee</h1></div>
+        <div id="right">
+            <div   class="home">Premium |</div>
+      
+            <div  class="mov">Live |</div>
+
+            <div class="symbol"><h5>icon</h5>
+                <div class="sub">
+                    <h3>zeeplex</h3>
+                    <h3>play</h3>
+                    <h3>article</h3>
+                    <h3>Learning</h3>
+                    <h3>kids</h3>
+                    <h3>video</h3>
+                    <h3>story</h3>
+                    <h3>channel</h3>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+    <hr style="color: white;">
+   <div >
+     
+
+    <div id="mcontain">
+        <div id="mleft">
+            <p onclick="b1fun()">Live NEWS</p>
+            <p onclick="b2fun()">Entertainment</p>
+            <p onclick="b3fun()">Movies</p>
+            
+        </div>
+        <div id="mright"></div>
+    </div>
+
+    
+</body>
+</html>
+<script>
+    var Exclusive=[
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-channel_1422341819/channel_list/republictvarnabgoswami2.png",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-203/channel_list/1170x658withlog_1911071689.png",
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-220/channel_list/1170x658withlogo_649346153.png",
+
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-wion/channel_list/wionpalkisharmaupadhyay.png",
+
+
+        },
+        {
+            image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-ddindia/channel_list/1170x658withlogo_421658302.png",
+
+
+        }
+    ]
+    var TV=[
+    {  
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-zeetamil/channel_list/1170x658_1250786368.png",
+    
+      },
+     ]
+      var tv1 = [
+  
+      {
+          image:"https://akamaividz2.zee5.com/image/upload/w_264,h_149,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-9-channel_2105335046/channel_list/1170x658_379547401.png",
+          
+      },  
+    ]
+
+     
+    localStorage.setItem("Exclusive", JSON.stringify(Exclusive));
+    localStorage.setItem("TV", JSON.stringify(TV));
+    localStorage.setItem("tv1", JSON.stringify(tv1));
+    
+
+   var a=JSON.parse(localStorage.getItem("tv1"))
+   var b= JSON.parse(localStorage.getItem("Exclusive"))
+   var c=JSON.parse(localStorage.getItem("TV"))
+   
+   
+  
+
+       a.map(function(elem,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",elem.image)
+          var tit=document.createElement("h4")
+          tit.textContent=elem.title
+          div.append(im,tit)
+          document.querySelector("#mright").append(div)
+       })
+
+       function b1fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+   
+          
+       b.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b2fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+      
+          
+     c.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    function b3fun(){
+        //    event.preventDefault()
+        document.querySelector("#mright").textContent=""
+     
+          
+     a.map(function(eleme,ind){
+           var div=document.createElement("div")
+          var im=document.createElement("img")
+          im.setAttribute("src",eleme.image)
+          var tit1=document.createElement("h4")
+          tit1.textContent=eleme.title
+          div.append(im,tit1)
+          document.querySelector("#mright").append(div)
+
+        })
+    }
+
+    
+  
+
+
+
+
+</script>

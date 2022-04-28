@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otp</title>
+    <style>
+        #main {
+            width: 25%;
+            height: 355px;
+            border: 1px solid rgb(184, 179, 179);
+            margin: auto;
+            margin-top: 15%;
+            text-align: center;
+            background-color: rgb(253, 253, 246);
+            border-radius: 10px;
+        }
+        
+        #otp {
+            font-size: 165%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5%
+        }
+        
+        #enter {
+            font-size: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 4%
+        }
+        
+        #box {
+            display: grid;
+            grid-template-columns: repeat(4, 20%);
+            grid-template-rows: 60px;
+            grid-gap: 20% 20px;
+            margin: 7% 10% 7% 15%;
+        }
+        
+        .box {
+            background-color: white;
+            border-radius: 10px;
+            border: 1px solid;
+            font-size: 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+        
+        #en {
+            font-size: 19px;
+            margin-bottom: 5%;
+        }
+        
+        #sub {
+            font-size: 25px;
+            padding: 2.5% 14% 2.5% 14%;
+            border-radius: 8px;
+            border: 0px;
+            background-color: blueviolet;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            margin-bottom: 2%;
+        }
+        
+        body {
+            background-color: rgb(126, 123, 123);
+            background-image: url("https://akamaividz2.zee5.com/image/upload/w_1188,h_475,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z562203/cover/1170x658withlogo366e887b55c34a6da1a869037694ace4.jpg");
+            background: linear-gradient(rgba(58, 57, 57, 0.5), rgba(77, 75, 75, 0.5)), url("https://akamaividz2.zee5.com/image/upload/w_1188,h_475,c_scale,f_webp,q_auto:eco,dpr_2.0/resources/0-0-1z562203/cover/1170x658withlogo366e887b55c34a6da1a869037694ace4.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <form action="">
+            <div id="otp">Verify OTP</div>
+            <div id="enter">Please enter 4-digits OTP we sent on Your Mobile no or Email ID</div>
+            <div id="box">
+                <input type="number" class="box" id="a">
+                <input type="number" class="box" id="b">
+                <input type="number" class="box" id="c">
+                <input type="number" class="box" id="d">
+            </div>
+            <div id="en">Enter Your OTP</div>
+            <div>
+                <input type="submit" id="sub" value="Verify">
+            </div>
+            <div>Resend OTP</div>
+        </form>
+    </div>
+</body>
+
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit", subfun);
+
+
+    function subfun(event) {
+        event.preventDefault()
+        var a = document.querySelector("#a").value
+        var b = document.querySelector("#b").value
+        var c = document.querySelector("#c").value
+        var d = document.querySelector("#d").value;
+
+        if (a == 5 && b == 5 && c == 8 && d == 5) {
+            alert("Congratulation! your varification is successful");
+            window.location.href = "zee5_login_page.html";
+        } else {
+            alert("wrong otp")
+        }
+
+    }
+</script>
